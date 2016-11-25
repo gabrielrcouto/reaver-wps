@@ -41,7 +41,7 @@ int process_arguments(int argc, char **argv)
 	int long_opt_index = 0;
 	char bssid[MAC_ADDR_LEN] = { 0 };
 	char mac[MAC_ADDR_LEN] = { 0 };
-	char *short_options = "b:e:m:i:t:d:c:T:x:r:g:l:o:p:s:C:aA5ELfnqvDShwNM";
+	char *short_options = "b:e:m:i:t:d:c:T:x:r:g:l:o:p:s:C:aA5ELfnqvDShwN";
 	struct option long_options[] = {
 		{ "interface", required_argument, NULL, 'i' },
 		{ "bssid", required_argument, NULL, 'b' },
@@ -73,7 +73,6 @@ int process_arguments(int argc, char **argv)
 		{ "verbose", no_argument, NULL, 'v' },
 		{ "win7", no_argument, NULL, 'w' },
 		{ "help", no_argument, NULL, 'h' },
-		{ "mac-changer", no_argument, NULL, 'M' },
 		{ 0, 0, 0, 0 }
 	};
 
@@ -174,9 +173,6 @@ int process_arguments(int argc, char **argv)
 			case 'N':
 				set_oo_send_nack(0);
 				break;
-			case 'M':
-				set_mac_changer(1);
-				break;
                         default:
                                 ret_val = EXIT_FAILURE;
                 }
@@ -202,7 +198,6 @@ void init_default_settings(void)
         set_timeout_is_nack(1);
 	set_oo_send_nack(1);
         set_wifi_band(BG_BAND);
-	set_mac_changer(0);
 }
 
 /* Parses the recurring delay optarg */
