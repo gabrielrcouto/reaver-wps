@@ -153,3 +153,5 @@ License
 ==============
 
 [MIT License](http://zenorocha.mit-license.org/)
+
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/bvezX9B9cTJTidmcB4iikNff/gabrielrcouto/reaver-wps'>  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/bvezX9B9cTJTidmcB4iikNff/gabrielrcouto/reaver-wps.svg' /></a>
